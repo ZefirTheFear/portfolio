@@ -1,0 +1,75 @@
+@import "../../variables";
+
+.home {
+  position: relative;
+  height: 100%;
+  padding: 4rem;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.home__lg-heading {
+  margin-top: 20vh;
+  font-size: 6rem;
+}
+
+.home__text-secondary {
+  color: $secondary-color;
+}
+
+.home__sm-heading {
+  margin-bottom: 2rem;
+  padding: 0.2rem 1rem;
+  background: rgba(lighten($primary-color, 2), 0.5);
+  font-size: 1.5rem;
+}
+
+.home__icons {
+  margin-top: 1rem;
+}
+
+.home__icon-link {
+  padding: 0.4rem;
+}
+
+.home__icon-gitnub,
+.home__icon-twitter,
+.home__icon-facebook,
+.home__icon-linkedin {
+  display: inline-block;
+  color: #fff;
+
+  &:hover {
+    color: $secondary-color;
+    @include easeOut;
+  }
+
+  &::before {
+    font-family: "Font Awesome 5 Brands";
+    font-size: 2rem;
+  }
+}
+
+.home__icon-gitnub {
+  &::before {
+    content: "\f09b";
+  }
+}
+
+.home__icon-twitter {
+  &::before {
+    content: "\f099";
+  }
+}
+
+.home__icon-facebook {
+  &::before {
+    content: "\f082";
+  }
+}
+
+.home__icon-linkedin {
+  &::before {
+    content: "\f08c";
+  }
+}

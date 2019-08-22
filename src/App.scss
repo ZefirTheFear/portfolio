@@ -1,0 +1,6 @@
+@import "./_variables";
+
+.app {
+  min-height: 100vh;
+  @include background;
+}
