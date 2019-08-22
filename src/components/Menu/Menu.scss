@@ -1,7 +1,42 @@
+@import "../../_variables";
+
 .menu {
   position: fixed;
   width: 100%;
   z-index: 2;
+}
+
+.menu__btn {
+  position: absolute;
+  z-index: 3;
+  top: 35px;
+  right: 35px;
+  cursor: pointer;
+  @include easeOut;
+
+  &.menu__btn_close {
+    transform: rotate(180deg);
+
+    .menu__btn-line {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(3px, -3px);
+      }
+    }
+  }
+}
+
+.menu__btn-line {
+  width: 28px;
+  height: 3px;
+  margin-bottom: 5px;
+  background: #fff;
+  @include easeOut;
 }
 
 .menu__nav-link {
