@@ -60,6 +60,11 @@
     width: 50%;
     height: 100vh;
     overflow: hidden;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .menu__branding {
@@ -74,9 +79,24 @@
     .menu__portrait {
       width: 250px;
       height: 250px;
-      background: url(../../assets/img/portrait.jpg);
+      // background: url(../../assets/img/portrait.jpg);
       border-radius: 50%;
+      overflow: hidden;
       border: 3px solid $secondary-color;
+
+      .menu__portrait-img {
+        width: 100%;
+      }
+
+      @media (max-width: 767px) {
+        width: 20vh;
+        height: 20vh;
+      }
+    }
+
+    @media (max-width: 767px) {
+      transform: translate(100%, 0);
+      height: 25vh;
     }
   }
 
@@ -88,10 +108,16 @@
     &.menu__list_show {
       transform: translate(0, 0);
     }
+
+    @media (max-width: 767px) {
+      transform: translate(-100%, 0);
+      height: 75vh;
+    }
   }
 
   .menu__nav-item {
     transform: translate(600px, 0);
+    margin-bottom: 1rem;
     @include easeOut;
 
     &.menu__nav-item_show {
@@ -112,6 +138,10 @@
     &.menu__nav-link_active {
       color: $secondary-color;
     }
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
   }
 }
 

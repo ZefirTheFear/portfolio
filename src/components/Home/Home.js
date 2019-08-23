@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <main className="home">
       <h1 className="home__lg-heading">
-        John <span className="home__text-secondary">Doe</span>
+        Алексей <span className="home__text-secondary">Клименко</span>
       </h1>
       <h2 className="home__sm-heading">Web Developer</h2>
       <div className="home__icons">

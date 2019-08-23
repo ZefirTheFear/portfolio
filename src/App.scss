@@ -1,6 +1,11 @@
 @import "./_variables";
 
 .app {
+  display: flex;
   min-height: 100vh;
   @include background;
+
+  @media (max-height: 700px) {
+    justify-content: center;
+  }
 }

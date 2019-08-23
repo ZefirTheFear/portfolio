@@ -1,16 +1,38 @@
 @import "../../_variables";
 
 .home {
+  display: flex;
+  flex-direction: column;
   position: relative;
   height: 100%;
   padding: 4rem;
   overflow: hidden;
   z-index: 1;
+
+  @media (max-width: 767px) {
+    align-items: center;
+  }
+
+  @media (max-height: 700px) {
+    padding: 1rem;
+    align-self: center;
+  }
 }
 
 .home__lg-heading {
   margin-top: 20vh;
   font-size: 6rem;
+  margin-bottom: 1rem;
+
+  @media (max-width: 767px) {
+    text-align: center;
+    font-size: 4rem;
+  }
+
+  @media (max-height: 700px) {
+    font-size: 4rem;
+    margin-top: 0;
+  }
 }
 
 .home__text-secondary {
@@ -19,9 +41,13 @@
 
 .home__sm-heading {
   margin-bottom: 2rem;
-  padding: 0.2rem 1rem;
+  padding: 0.5rem 1rem;
   background: rgba(lighten($primary-color, 2), 0.5);
   font-size: 1.5rem;
+
+  @media (max-height: 700px) {
+    margin-bottom: 1rem;
+  }
 }
 
 .home__icons {

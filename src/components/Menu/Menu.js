@@ -11,25 +11,33 @@ const Menu = () => {
 
   const [showMenu, setShowMenu] = useState(false);
 
+  const openMenu = () => {
+    menuBtn.current.classList.add("menu__btn_close");
+    menuNav.current.classList.add("menu__nav_show");
+    menuBranding.current.classList.add("menu__branding_show");
+    menuList.current.classList.add("menu__list_show");
+    document
+      .querySelectorAll(".menu__nav-item")
+      .forEach(item => item.classList.add("menu__nav-item_show"));
+    setShowMenu(true);
+  };
+
+  const closeMenu = () => {
+    menuBtn.current.classList.remove("menu__btn_close");
+    menuNav.current.classList.remove("menu__nav_show");
+    menuBranding.current.classList.remove("menu__branding_show");
+    menuList.current.classList.remove("menu__list_show");
+    document
+      .querySelectorAll(".menu__nav-item")
+      .forEach(item => item.classList.remove("menu__nav-item_show"));
+    setShowMenu(false);
+  };
+
   const toggleMenu = () => {
     if (!showMenu) {
-      menuBtn.current.classList.add("menu__btn_close");
-      menuNav.current.classList.add("menu__nav_show");
-      menuBranding.current.classList.add("menu__branding_show");
-      menuList.current.classList.add("menu__list_show");
-      document
-        .querySelectorAll(".menu__nav-item")
-        .forEach(item => item.classList.add("menu__nav-item_show"));
-      setShowMenu(true);
+      openMenu();
     } else {
-      menuBtn.current.classList.remove("menu__btn_close");
-      menuNav.current.classList.remove("menu__nav_show");
-      menuBranding.current.classList.remove("menu__branding_show");
-      menuList.current.classList.remove("menu__list_show");
-      document
-        .querySelectorAll(".menu__nav-item")
-        .forEach(item => item.classList.remove("menu__nav-item_show"));
-      setShowMenu(false);
+      closeMenu();
     }
   };
 
@@ -43,7 +51,13 @@ const Menu = () => {
 
       <nav className="menu__nav" ref={menuNav}>
         <div className="menu__branding" ref={menuBranding}>
-          <div className="menu__portrait" />
+          <div className="menu__portrait">
+            <img
+              className="menu__portrait-img"
+              src={require("../../assets/img/portrait.jpg")}
+              alt="portrait"
+            />
+          </div>
         </div>
         <ul className="menu__list" ref={menuList}>
           <li className="menu__nav-item">
@@ -52,17 +66,28 @@ const Menu = () => {
               exact
               className="menu__nav-link"
               activeClassName="menu__nav-link_active"
+              onClick={closeMenu}
             >
               Home
             </NavLink>
           </li>
           <li className="menu__nav-item">
-            <NavLink to="/about" className="menu__nav-link" activeClassName="menu__nav-link_active">
+            <NavLink
+              to="/about"
+              className="menu__nav-link"
+              activeClassName="menu__nav-link_active"
+              onClick={closeMenu}
+            >
               About me
             </NavLink>
           </li>
           <li className="menu__nav-item">
-            <NavLink to="/work" className="menu__nav-link" activeClassName="menu__nav-link_active">
+            <NavLink
+              to="/work"
+              className="menu__nav-link"
+              activeClassName="menu__nav-link_active"
+              onClick={closeMenu}
+            >
               My work
             </NavLink>
           </li>
@@ -71,6 +96,7 @@ const Menu = () => {
               to="/contact"
               className="menu__nav-link"
               activeClassName="menu__nav-link_active"
+              onClick={closeMenu}
             >
               How to reach me
             </NavLink>
