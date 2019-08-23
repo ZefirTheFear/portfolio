@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "./Menu.scss";
 
@@ -43,28 +43,37 @@ const Menu = () => {
 
       <nav className="menu__nav" ref={menuNav}>
         <div className="menu__branding" ref={menuBranding}>
-          <div className="menu__portrait">img</div>
+          <div className="menu__portrait" />
         </div>
         <ul className="menu__list" ref={menuList}>
           <li className="menu__nav-item">
-            <Link to="/" className="menu__nav-link">
+            <NavLink
+              to="/"
+              exact
+              className="menu__nav-link"
+              activeClassName="menu__nav-link_active"
+            >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className="menu__nav-item">
-            <Link to="/about" className="menu__nav-link">
+            <NavLink to="/about" className="menu__nav-link" activeClassName="menu__nav-link_active">
               About me
-            </Link>
+            </NavLink>
           </li>
           <li className="menu__nav-item">
-            <Link to="/work" className="menu__nav-link">
+            <NavLink to="/work" className="menu__nav-link" activeClassName="menu__nav-link_active">
               My work
-            </Link>
+            </NavLink>
           </li>
           <li className="menu__nav-item">
-            <Link to="/contact" className="menu__nav-link">
+            <NavLink
+              to="/contact"
+              className="menu__nav-link"
+              activeClassName="menu__nav-link_active"
+            >
               How to reach me
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

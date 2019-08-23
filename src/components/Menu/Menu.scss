@@ -39,7 +39,84 @@
   @include easeOut;
 }
 
-.menu__nav-link {
-  color: #fff;
-  text-decoration: none;
+.menu__nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+
+  &.menu__nav_show {
+    visibility: visible;
+  }
+
+  .menu__branding,
+  .menu__list {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .menu__branding {
+    background: $primary-color;
+    transform: translate(0, 100%);
+    @include easeOut;
+
+    &.menu__branding_show {
+      transform: translate(0, 0);
+    }
+
+    .menu__portrait {
+      width: 250px;
+      height: 250px;
+      background: url(../../assets/img/portrait.jpg);
+      border-radius: 50%;
+      border: 3px solid $secondary-color;
+    }
+  }
+
+  .menu__list {
+    background: darken($primary-color, 5);
+    transform: translate(0, -100%);
+    @include easeOut;
+
+    &.menu__list_show {
+      transform: translate(0, 0);
+    }
+  }
+
+  .menu__nav-item {
+    transform: translate(600px, 0);
+    @include easeOut;
+
+    &.menu__nav-item_show {
+      transform: translate(0, 0);
+    }
+  }
+
+  .menu__nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    @include easeOut;
+
+    &:hover,
+    &.menu__nav-link_active {
+      color: $secondary-color;
+    }
+  }
+}
+
+@for $x from 1 through 4 {
+  .menu__nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
 }
