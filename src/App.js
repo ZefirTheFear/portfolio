@@ -12,7 +12,7 @@ import "./App.scss";
 function App() {
   return (
     <BrowserRouter>
-      <div className="app">
+      <main className="app">
         <Menu />
 
         <Route exact path="/" component={Home} />
@@ -20,7 +20,7 @@ function App() {
         <Route exact path="/work" component={Work} />
         <Route exact path="/contact" component={Contact} />
         <Redirect to="/" />
-      </div>
+      </main>
     </BrowserRouter>
   );
 }

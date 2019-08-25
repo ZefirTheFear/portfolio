@@ -35,7 +35,7 @@
   width: 28px;
   height: 3px;
   margin-bottom: 5px;
-  background: #fff;
+  background: $secondary-color;
   @include easeOut;
 }
 
@@ -79,7 +79,6 @@
     .menu__portrait {
       width: 250px;
       height: 250px;
-      // background: url(../../assets/img/portrait.jpg);
       border-radius: 50%;
       overflow: hidden;
       border: 3px solid $secondary-color;

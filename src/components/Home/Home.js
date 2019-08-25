@@ -3,7 +3,7 @@ import "./Home.scss";
 
 const Home = () => {
   return (
-    <main className="home">
+    <div className="home">
       <h1 className="home__lg-heading">
         Алексей <span className="home__text-secondary">Клименко</span>
       </h1>
@@ -22,7 +22,7 @@ const Home = () => {
           <div className="home__icon-linkedin" />
         </a>
       </div>
-    </main>
+    </div>
   );
 };
 
