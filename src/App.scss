@@ -3,9 +3,15 @@
 .app {
   display: flex;
   min-height: 100vh;
-  @include background;
+}
 
-  @media (max-height: 700px) {
-    justify-content: center;
+.app__inner {
+  display: flex;
+  width: 100%;
+  margin-top: $menu-height;
+  padding: 5vh 5vw;
+
+  @media (max-height: 480px) {
+    margin-top: 20vh;
   }
 }

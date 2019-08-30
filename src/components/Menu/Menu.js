@@ -1,9 +1,13 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import { NavLink } from "react-router-dom";
+
+import LanguageContext from "../../context/languageContext";
 
 import "./Menu.scss";
 
 const Menu = () => {
+  const languageContext = useContext(LanguageContext);
+
   const menuBtn = useRef();
   const menuNav = useRef();
   const menuBranding = useRef();
@@ -41,9 +45,36 @@ const Menu = () => {
     }
   };
 
+  const setRussianLanguage = () => {
+    localStorage.setItem("language", "ru");
+    languageContext.setLanguage("ru");
+  };
+
+  const setEnglishLanguage = () => {
+    localStorage.setItem("language", "en");
+    languageContext.setLanguage("en");
+  };
+
   return (
     <header className="menu">
-      <div className="menu__btn" onClick={toggleMenu} ref={menuBtn}>
+      <div className="menu__languages">
+        <button
+          className="menu__language-btn menu__language-btn_ru"
+          title="Русский"
+          onClick={setRussianLanguage}
+        />
+        <button
+          className="menu__language-btn menu__language-btn_en"
+          title="English"
+          onClick={setEnglishLanguage}
+        />
+      </div>
+      <div
+        className="menu__btn"
+        onClick={toggleMenu}
+        ref={menuBtn}
+        title={languageContext.language === "ru" ? "Меню" : "Menu"}
+      >
         <div className="menu__btn-line" />
         <div className="menu__btn-line" />
         <div className="menu__btn-line" />
@@ -68,7 +99,7 @@ const Menu = () => {
               activeClassName="menu__nav-link_active"
               onClick={closeMenu}
             >
-              Home
+              {languageContext.language === "ru" ? "Главная" : "Home"}
             </NavLink>
           </li>
           <li className="menu__nav-item">
@@ -78,7 +109,7 @@ const Menu = () => {
               activeClassName="menu__nav-link_active"
               onClick={closeMenu}
             >
-              About me
+              {languageContext.language === "ru" ? "Обо мне" : "About me"}
             </NavLink>
           </li>
           <li className="menu__nav-item">
@@ -88,7 +119,7 @@ const Menu = () => {
               activeClassName="menu__nav-link_active"
               onClick={closeMenu}
             >
-              My work
+              {languageContext.language === "ru" ? "Примеры кода" : "Code examples"}
             </NavLink>
           </li>
           <li className="menu__nav-item">
@@ -98,7 +129,7 @@ const Menu = () => {
               activeClassName="menu__nav-link_active"
               onClick={closeMenu}
             >
-              How to reach me
+              {languageContext.language === "ru" ? "Контакты" : "Contact me"}
             </NavLink>
           </li>
         </ul>

@@ -1,16 +1,50 @@
 @import "../../_variables";
 
 .menu {
+  display: flex;
+  align-items: center;
   position: fixed;
   width: 100%;
   z-index: 2;
+  height: $menu-height;
+  background: $primary-color;
+
+  @media (max-height: 480px) {
+    height: 20vh;
+  }
+}
+
+.menu__languages {
+  margin-left: 30px;
+}
+
+.menu__language-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid $secondary-color;
+  outline: 0;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  @include fastEaseOut;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.menu__language-btn_ru {
+  background-image: url(../../assets/img/svg_flags/russia.svg);
+}
+
+.menu__language-btn_en {
+  background-image: url(../../assets/img/svg_flags/united-kingdom.svg);
 }
 
 .menu__btn {
-  position: absolute;
+  margin-left: auto;
+  margin-right: 28px;
   z-index: 3;
-  top: 35px;
-  right: 35px;
   cursor: pointer;
   @include easeOut;
 
@@ -19,14 +53,21 @@
 
     .menu__btn-line {
       &:nth-child(1) {
-        transform: rotate(45deg) translate(8px, 8px);
+        transform: rotate(45deg) translate(6px, 6px);
       }
       &:nth-child(2) {
         opacity: 0;
       }
       &:nth-child(3) {
-        transform: rotate(-45deg) translate(3px, -3px);
+        transform: rotate(-45deg) translate(5px, -5px);
       }
+    }
+  }
+
+  &:hover {
+    .menu__btn-line {
+      background: $secondary-color;
+      transition: all 0.5s ease-out, background-color 0.2s ease-out;
     }
   }
 }
@@ -34,8 +75,8 @@
 .menu__btn-line {
   width: 28px;
   height: 3px;
-  margin-bottom: 5px;
-  background: $secondary-color;
+  margin: 5px 0;
+  background: #fff;
   @include easeOut;
 }
 
@@ -44,7 +85,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.95;
   visibility: hidden;
 
   &.menu__nav_show {
@@ -131,11 +172,12 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    @include easeOut;
+    @include fastEaseOut;
 
     &:hover,
     &.menu__nav-link_active {
       color: $secondary-color;
+      letter-spacing: 1px;
     }
   }
 
