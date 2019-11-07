@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.c5d2cdfa.chunk.css",
+    "main.js": "/portfolio/static/js/main.029e84d4.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.029e84d4.chunk.js.map",
+    "runtime~main.js": "/portfolio/static/js/runtime~main.e9a507a1.js",
+    "runtime~main.js.map": "/portfolio/static/js/runtime~main.e9a507a1.js.map",
+    "static/js/2.ab9120bb.chunk.js": "/portfolio/static/js/2.ab9120bb.chunk.js",
+    "static/js/2.ab9120bb.chunk.js.map": "/portfolio/static/js/2.ab9120bb.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.cf05a2b382609860c6b15e20a9686724.js": "/portfolio/precache-manifest.cf05a2b382609860c6b15e20a9686724.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/main.c5d2cdfa.chunk.css.map": "/portfolio/static/css/main.c5d2cdfa.chunk.css.map",
+    "static/media/Boostrap_logo.svg": "/portfolio/static/media/Boostrap_logo.06596577.svg",
+    "static/media/CSS3_logo.svg": "/portfolio/static/media/CSS3_logo.7415a70a.svg",
+    "static/media/Git_logo.svg": "/portfolio/static/media/Git_logo.aaec9219.svg",
+    "static/media/HTML5_logo.svg": "/portfolio/static/media/HTML5_logo.525f317f.svg",
+    "static/media/JQuery_logo.svg": "/portfolio/static/media/JQuery_logo.03d78f02.svg",
+    "static/media/JavaScript_logo.svg": "/portfolio/static/media/JavaScript_logo.dd60b11e.svg",
+    "static/media/Mongodb_logo.svg": "/portfolio/static/media/Mongodb_logo.8f1222a8.svg",
+    "static/media/Mongoose_logo.svg": "/portfolio/static/media/Mongoose_logo.514acb44.svg",
+    "static/media/Node.js_logo.svg": "/portfolio/static/media/Node.js_logo.89ccb090.svg",
+    "static/media/React_logo.svg": "/portfolio/static/media/React_logo.8e26f220.svg",
+    "static/media/Sass_logo.svg": "/portfolio/static/media/Sass_logo.e0f651ac.svg",
+    "static/media/index.scss": "/portfolio/static/media/background.00051dbb.jpg",
+    "static/media/portrait.jpg": "/portfolio/static/media/portrait.ef93b85f.jpg",
+    "static/media/project1.jpg": "/portfolio/static/media/project1.2efd960d.jpg",
+    "static/media/project2.jpg": "/portfolio/static/media/project2.473d9f55.jpg",
+    "static/media/project3.jpg": "/portfolio/static/media/project3.139308d7.jpg",
+    "static/media/Menu.scss": "/portfolio/static/media/united-kingdom.e5564902.svg"
+  }
+}
