@@ -44,20 +44,22 @@
 .work__projects {
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.7rem;
+  grid-template-columns: repeat(2, calc(50% - 1.5rem));
+  grid-gap: 1.5rem;
 
   @media (max-height: 480px) {
     margin-top: 1rem;
   }
 
   @media (max-width: 767px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 500px) {
     grid-template-columns: 1fr;
   }
+}
+
+.work__project-title {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: $secondary-color;
 }
 
 .work__project-img {
@@ -103,5 +105,13 @@
     content: "\f09b";
     font-family: "Font Awesome 5 Brands";
     margin-right: 5px;
+  }
+}
+
+.work__project-description {
+  pre {
+    margin-top: 1rem;
+    padding: 0 1rem;
+    white-space: pre-wrap;
   }
 }

@@ -26,7 +26,7 @@ const Contact = props => {
           <span className="contact__text-secondary">
             {props.language === "ru" ? "Телефон:" : "Phone:"}
           </span>{" "}
-          (555) 555-5555
+          +380664383868
         </div>
       </div>
     </div>
