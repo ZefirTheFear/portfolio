@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Contact.scss";
 
 const Contact = props => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="contact">
       <h1 className="contact__lg-heading">

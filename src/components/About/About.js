@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./About.scss";
 
 const About = props => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="about">
       <h1 className="about__lg-heading">

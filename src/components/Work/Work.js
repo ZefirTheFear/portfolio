@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Work.scss";
 
 const Work = props => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="work">
       <h1 className="work__lg-heading">
@@ -23,7 +27,12 @@ const Work = props => {
             src={require("../../assets/img/projects/social-news.png")}
             alt="project-social-news"
           />
-          <a href="#!" className="work__project-link" rel="noopener noreferrer" target="_blank">
+          <a
+            href="https://social-news-ztf.herokuapp.com/"
+            className="work__project-link"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             {props.language === "ru" ? "Демо" : "Demo"}
           </a>
           <a
