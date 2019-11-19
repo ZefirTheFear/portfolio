@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext, useEffect } from "react";
+import React, { useState, useRef, useContext } from "react";
 import { NavLink } from "react-router-dom";
 
 import LanguageContext from "../../context/languageContext";
@@ -14,14 +14,6 @@ const Menu = () => {
   const menuList = useRef();
 
   const [showMenu, setShowMenu] = useState(false);
-
-  useEffect(() => {
-    if (showMenu) {
-      document.documentElement.style.overflow = "hidden";
-    } else {
-      document.documentElement.style.overflow = "";
-    }
-  }, [showMenu]);
 
   const openMenu = () => {
     menuBtn.current.classList.add("menu__btn_close");
