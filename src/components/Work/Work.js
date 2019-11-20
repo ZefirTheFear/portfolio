@@ -75,7 +75,7 @@ const Work = props => {
             alt="project-portfolio"
           />
           <a
-            href="https://portfolio-ztf.web.app/"
+            href="alexey-klimenko.web.app"
             className="work__project-link"
             rel="noopener noreferrer"
             target="_blank"
