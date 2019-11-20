@@ -43,20 +43,24 @@ const About = props => {
           <h3 className="about__subtitle">
             {props.language === "ru" ? "Образование" : "Education"}
           </h3>
-          <h6 className="about__education-title">2004-2010</h6>
           <div className="about__skills-description">
-            {props.language === "ru"
-              ? "Национальный технический университет Украины 'Киевский Политехнический Институт' (Институт энергосохранения и энергоменеджмента)"
-              : "National Technical University of Ukraine 'Igor Sikorsky Kyiv Polytechnic Institute' (Institute of Energy Saving and Energy Management)"}
+            <pre>
+              {props.language === "ru"
+                ? `- 2004-2010: Национальный технический университет Украины 'Киевский Политехнический Институт' (Институт энергосохранения и энергоменеджмента)
+- Десятки платных и бесплатных онлайн курсов. В основном, на Udemy.`
+                : `- 2004-2010: National Technical University of Ukraine 'Igor Sikorsky Kyiv Polytechnic Institute' (Institute of Energy Saving and Energy Management)
+- Dozens of paid and free online courses. On Udemy, mostly`}
+            </pre>
           </div>
         </div>
         <div className="about__experience">
           <h3 className="about__subtitle">{props.language === "ru" ? "Опыт" : "Experience"}</h3>
-          <h6 className="about__experience-title">Full Stack Web Developer</h6>
           <div className="about__experience-description">
-            {props.language === "ru"
-              ? "Десятки платных и бесплатных онлайн курсов. В основном, на Udemy."
-              : "Dozens of paid and free online courses. On Udemy, mostly"}
+            <pre>
+              {props.language === "ru"
+                ? `Создание проектов с использованием React, Node.js, MongoDB. Ссылки на демо и github-репозиторий можно посмотреть в разделе 'примеры кода'.`
+                : `Creating projects using React, Node.js, MongoDB. Links to demos and github repository you could see in section 'code examples'.`}
+            </pre>
           </div>
         </div>
         <div className="about__skills">

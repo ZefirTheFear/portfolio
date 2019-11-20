@@ -104,15 +104,10 @@
 }
 
 .about__subtitle {
+  margin-bottom: 0.5rem;
   text-align: center;
   font-size: 1.5rem;
   color: $secondary-color;
-}
-
-.about__education-title,
-.about__experience-title {
-  text-align: center;
-  margin: 1rem 0;
 }
 
 .about__education-description,
@@ -120,6 +115,15 @@
 .about__skills-description {
   text-align: center;
   line-height: 1.5;
+}
+
+.about__skills-description,
+.about__experience-description {
+  pre {
+    padding: 0 16px;
+    white-space: pre-wrap;
+    text-align: left;
+  }
 }
 
 .about__logos {
