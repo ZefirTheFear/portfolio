@@ -53,9 +53,8 @@ const Work = props => {
       img: shopImg,
       demo: "https://shop-react-landing.web.app/",
       github: "https://github.com/ZefirTheFear/shop",
-      descriptionRu:
-        "Простенький фронт для интернет-магазина. Используется react context api + local storage",
-      descriptionEn: "Simple front for online shop. Using react context api + local storage"
+      descriptionRu: "Простенький фронт для интернет-магазина. Используется redux + local storage",
+      descriptionEn: "Simple front for online shop. Using redux + local storage"
     },
     {
       titleEn: "CV-site",

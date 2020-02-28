@@ -70,57 +70,62 @@ const About = props => {
               <img
                 className="about__logo"
                 src={require("../../assets/img/svg_logos/HTML5_logo.svg")}
-                alt="html5"
+                alt="html"
               />
               <img
                 className="about__logo"
                 src={require("../../assets/img/svg_logos/CSS3_logo.svg")}
-                alt="html5"
+                alt="css"
               />
               <img
                 className="about__logo"
                 src={require("../../assets/img/svg_logos/Sass_logo.svg")}
-                alt="html5"
+                alt="sass"
               />
               <img
                 className="about__logo"
                 src={require("../../assets/img/svg_logos/Boostrap_logo.svg")}
-                alt="html5"
+                alt="bootstrap"
               />
               <img
                 className="about__logo"
                 src={require("../../assets/img/svg_logos/JavaScript_logo.svg")}
-                alt="html5"
+                alt="js"
               />
               <img
                 className="about__logo"
                 src={require("../../assets/img/svg_logos/React_logo.svg")}
-                alt="html5"
+                alt="react"
+              />
+              <img
+                className="about__logo"
+                src={require("../../assets/img/svg_logos/Redux_logo.svg")}
+                alt="redux"
               />
               <img
                 className="about__logo"
                 src={require("../../assets/img/svg_logos/JQuery_logo.svg")}
-                alt="html5"
+                alt="jquery"
               />
               <img
                 className="about__logo"
                 src={require("../../assets/img/svg_logos/Node.js_logo.svg")}
-                alt="html5"
+                alt="nodejs"
               />
               <img
                 className="about__logo"
                 src={require("../../assets/img/svg_logos/Mongodb_logo.svg")}
-                alt="html5"
+                alt="mongodb"
               />
               <img
                 className="about__logo"
                 src={require("../../assets/img/svg_logos/Mongoose_logo.svg")}
-                alt="html5"
+                alt="mongoose"
               />
               <img
                 className="about__logo"
                 src={require("../../assets/img/svg_logos/Git_logo.svg")}
-                alt="html5"
+                alt="git"
               />
             </div>
             <ul className="about__skill-list">
@@ -130,6 +135,7 @@ const About = props => {
               <li>Bootstap 4</li>
               <li>JS</li>
               <li>React JS</li>
+              <li>Redux</li>
               <li>JQuery</li>
               <li>Node JS (Express)</li>
               <li>Mongo DB (Mongoose)</li>
